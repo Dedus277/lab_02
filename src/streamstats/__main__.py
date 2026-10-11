@@ -15,7 +15,7 @@ def parse_args(argv: list | None) -> argparse.Namespace:
     analyze.add_argument("inputs", nargs="+", metavar="INPUT", help="input files")
     analyze.add_argument("--format", required=True, metavar="csv|jsonl", help="input format")
     analyze.add_argument("--output", help="report file (default: print on the screen)")
-    analyze.add_argument("--skip-invalid", action="store_true", help="skip bad lines")
+    analyze.add_argument("--skip-invalid",   action="store_true", help="skip bad lines")
     analyze.add_argument("--top", type=int, default=TOP_N, help="size of the error ranking")
     return parser.parse_args(argv)
 
